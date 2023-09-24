@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <title>Monthly Report</title>
+</head>
+<body>
+    <div class="fs-5 fw-semibold">Hello {{ user.first_name }} {{ user.last_name }}, </div>
+    <div> Tickets booked last month :</div>
+    <hr class="border border-dark border-2 opacity-75">
+    <br>
+    <div>
+        {% for show in shows %}
+        <div class="container border border-dark-subtle">
+            <div class="mt-2">
+              <h5 class="fw-medium fs-4">{{ show.show }} - {{show.language}}</h5>
+              <h6 class="mb-2 text-body-secondary">{{ show.venue }}</h6>
+              <p class="fw-semibold">{{ show.date }} | {{show.timing}}</p>
+              <p class="fw-semibold">{{ show.numOfSeats }} ticket</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
