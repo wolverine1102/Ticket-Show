@@ -1,0 +1,8 @@
+Flask
+Flask-Security
+Flask-SQLAlchemy
+Flask-Cors
+Flask-Caching
+pytz
+celery
+redis
