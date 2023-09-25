@@ -1,4 +1,5 @@
 .gitignore
+Dockerfile
 # Logs
 logs
 *.log
